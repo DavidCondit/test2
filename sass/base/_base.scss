@@ -1,0 +1,20 @@
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+   /* Set font-size on the root element so rem units can be used on child elements. Can then easily resize every child's font and margin relative to this root element. */ 
+   /* Since the goal is to make the root element's font-size initially 10px, but since most browsers use a 16px font-size default, use 10/16=0.625, ie 62.5% of 16px is 10px. 
+   Assigning 62.5% rather than 10px respects the user's chosen font-size and thus "auto-zooms" the website typography, margin, padding, etc relative to the zoon.
+   */
+    font-size: 62.5%; 
+}
+
+body {
+    box-sizing: border-box;
+}
+
