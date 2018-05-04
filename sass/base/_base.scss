@@ -11,10 +11,27 @@ html {
    /* Since the goal is to make the root element's font-size initially 10px, but since most browsers use a 16px font-size default, use 10/16=0.625, ie 62.5% of 16px is 10px. 
    Assigning 62.5% rather than 10px respects the user's chosen font-size and thus "auto-zooms" the website typography, margin, padding, etc relative to the zoon.
    */
-    font-size: 62.5%; 
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+    @include respond(tab-land) { // width < 900?
+        font-size: 56.25%; // 1rem = 9px, 9px/16px = 56.25%
+    }
+
+    @include respond(tab-port) { // width < 600?
+        font-size: 50%; // 1rem = 8px, 8px/16px = 50%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12px, 12px/16px = 75%
+    }
 }
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+    
+    @include respond(tab-port) { 
+        padding: 0;
+    }    
 }
 
