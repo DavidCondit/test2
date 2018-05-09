@@ -170,7 +170,10 @@
 
 
 
-    @include respond('tab-port') {
+    // @include respond('tab-port') {
+    @media only screen and (max-width: 56.25em), // 900px or less
+           only screen and (hover: none) { // and device is touchscreen, so hover isn't possible.
+
         height: auto;
         border-radius: 3px;        
         background-color: $color-white;
